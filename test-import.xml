@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-06-11 15:30">
+    <shop>
+        <!-- Краткая информация о магазине -->
+        <name>Мій Супер Магазин</name>
+        <name_ru>Мой Супер Магазин</name_ru>
+        <company>ТОВ "Супер Шоп Україна"</company>
+        <url>https://www.super-shop-example.com.ua/</url>
+        <platform>Custom CMS</platform>
+        <version>1.2</version>
+
+        <!-- Валюты, используемые в магазине -->
+        <currencies>
+            <currency id="UAH" rate="1"/>
+            <currency id="USD" rate="CB"/>
+        </currencies>
+
+        <!-- 
+            Структура категорий товаров.
+            Стандарт YML не предоставляет простого способа для мультиязычных названий категорий в одном фиде.
+            Обычно это настраивается на стороне принимающей площадки.
+            Поэтому названия категорий оставлены на основном языке.
+        -->
+        <categories>
+            <category id="1">Одяг</category>
+            <category id="10" parentId="1">Футболки</category>
+            <category id="11" parentId="1">Джинси</category>
+
+            <category id="2">Електроніка</category>
+            <category id="20" parentId="2">Смартфони</category>
+        </categories>
+
+        <!-- Список товаров (офферов) -->
+        <offers>
+            <offer id="smp-11pro-gr-128">
+                <name>Смартфон Model 11 Pro 128GB</name>
+                <name_ru>Смартфон Model 11 Pro 128GB</name_ru>
+                <url>https://www.super-shop-example.com.ua/products/smp-11pro-gr-128</url>
+                <price>29999</price>
+                <currencyId>UAH</currencyId>
+                <categoryId>20</categoryId>
+                <picture>https://placehold.co/600x600/333/white?text=Смартфон</picture>
+                <vendor>SuperBrand</vendor>
+                <description>
+                    <![CDATA[
+                    <p>Чудовий смартфон з передовими технологіями.</p>
+                    <p>Характеристики:</p>
+                    <ul>
+                        <li>Пам'ять: 128GB</li>
+                        <li>Колір: Сірий космос</li>
+                        <li>Камера: 48МП</li>
+                    </ul>
+                    ]]>
+                </description>
+                <description_ru>
+                    <![CDATA[
+                    <p>Отличный смартфон с передовыми технологиями.</p>
+                    <p>Характеристики:</p>
+                    <ul>
+                        <li>Память: 128GB</li>
+                        <li>Цвет: Серый космос</li>
+                        <li>Камера: 48МП</li>
+                    </ul>
+                    ]]>
+                </description_ru>
+                <available>true</available>
+            </offer>
+
+            <offer id="tshirt-logo-blue-m" group_id="12345">
+                <name>Фірмова футболка з логотипом</name>
+                <name_ru>Фирменная футболка с логотипом</name_ru>
+                <url>https://www.super-shop-example.com.ua/products/tshirt-logo-blue-m</url>
+                <price>499</price>
+                <currencyId>UAH</currencyId>
+                <categoryId>10</categoryId>
+                <picture>https://placehold.co/600x600/007bff/white?text=Синя+футболка</picture>
+                <description>Якісна футболка зі 100% бавовни з фірмовим логотипом.</description>
+                <description_ru>Качественная футболка из 100% хлопка с фирменным логотипом.</description_ru>
+                <param name="Колір">Синій</param>
+                <param name="Цвет">Синий</param>
+                <param name="Розмір">M</param>
+                <param name="Размер">M</param>
+                <available>true</available>
+            </offer>
+
+            <offer id="tshirt-logo-black-m" group_id="12345">
+                <name>Фірмова футболка з логотипом</name>
+                <name_ru>Фирменная футболка с логотипом</name_ru>
+                <url>https://www.super-shop-example.com.ua/products/tshirt-logo-black-m</url>
+                <price>499</price>
+                <currencyId>UAH</currencyId>
+                <categoryId>10</categoryId>
+                <picture>https://placehold.co/600x600/000/white?text=Чорна+футболка</picture>
+                <description>Якісна футболка зі 100% бавовни з фірмовим логотипом.</description>
+                <description_ru>Качественная футболка из 100% хлопка с фирменным логотипом.</description_ru>
+                <param name="Колір">Чорний</param>
+                <param name="Цвет">Черный</param>
+                <param name="Розмір">M</param>
+                <param name="Размер">M</param>
+                <available>true</available>
+            </offer>
+
+        </offers>
+    </shop>
+</yml_catalog>
