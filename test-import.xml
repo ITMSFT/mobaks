@@ -11,10 +11,8 @@
 
         <!-- Валюты, используемые в магазине -->
         <currencies>
-            <currency id="UAH" rate="1"/>
-            <currency id="USD" rate="CB"/>
-        </currencies>
-
+			<currency id="USD" rate="42"/>
+		</currencies>
         <!-- 
             Структура категорий товаров.
             Стандарт YML не предоставляет простого способа для мультиязычных названий категорий в одном фиде.
@@ -29,76 +27,91 @@
             <category id="2">Електроніка</category>
             <category id="20" parentId="2">Смартфони</category>
         </categories>
-
         <!-- Список товаров (офферов) -->
         <offers>
-            <offer id="smp-11pro-gr-128">
-                <name>Смартфон Model 11 Pro 128GB</name>
-                <name_ru>Смартфон Model 11 Pro 128GB</name_ru>
-                <url>https://www.super-shop-example.com.ua/products/smp-11pro-gr-128</url>
-                <price>29999</price>
-                <currencyId>UAH</currencyId>
-                <categoryId>20</categoryId>
-                <picture>https://placehold.co/600x600/333/white?text=Смартфон</picture>
-                <vendor>SuperBrand</vendor>
-                <description>
-                    <![CDATA[
-                    <p>Чудовий смартфон з передовими технологіями.</p>
-                    <p>Характеристики:</p>
-                    <ul>
-                        <li>Пам'ять: 128GB</li>
-                        <li>Колір: Сірий космос</li>
-                        <li>Камера: 48МП</li>
-                    </ul>
-                    ]]>
-                </description>
-                <description_ru>
-                    <![CDATA[
-                    <p>Отличный смартфон с передовыми технологиями.</p>
-                    <p>Характеристики:</p>
-                    <ul>
-                        <li>Память: 128GB</li>
-                        <li>Цвет: Серый космос</li>
-                        <li>Камера: 48МП</li>
-                    </ul>
-                    ]]>
-                </description_ru>
-                <available>true</available>
-            </offer>
-
-            <offer id="tshirt-logo-blue-m" group_id="12345">
-                <name>Фірмова футболка з логотипом</name>
-                <name_ru>Фирменная футболка с логотипом</name_ru>
-                <url>https://www.super-shop-example.com.ua/products/tshirt-logo-blue-m</url>
-                <price>499</price>
-                <currencyId>UAH</currencyId>
-                <categoryId>10</categoryId>
-                <picture>https://placehold.co/600x600/007bff/white?text=Синя+футболка</picture>
-                <description>Якісна футболка зі 100% бавовни з фірмовим логотипом.</description>
-                <description_ru>Качественная футболка из 100% хлопка с фирменным логотипом.</description_ru>
-                <param name="Колір">Синій</param>
-                <param name="Цвет">Синий</param>
-                <param name="Розмір">M</param>
-                <param name="Размер">M</param>
-                <available>true</available>
-            </offer>
-
-            <offer id="tshirt-logo-black-m" group_id="12345">
-                <name>Фірмова футболка з логотипом</name>
-                <name_ru>Фирменная футболка с логотипом</name_ru>
-                <url>https://www.super-shop-example.com.ua/products/tshirt-logo-black-m</url>
-                <price>499</price>
-                <currencyId>UAH</currencyId>
-                <categoryId>10</categoryId>
-                <picture>https://placehold.co/600x600/000/white?text=Чорна+футболка</picture>
-                <description>Якісна футболка зі 100% бавовни з фірмовим логотипом.</description>
-                <description_ru>Качественная футболка из 100% хлопка с фирменным логотипом.</description_ru>
-                <param name="Колір">Чорний</param>
-                <param name="Цвет">Черный</param>
-                <param name="Розмір">M</param>
-                <param name="Размер">M</param>
-                <available>true</available>
-            </offer>
+            <!-- Пример одиночного оффера -->
+			<offer id="00-00000828" available="true">                     <!-- Открытие тега, его УНИКАЛЬНЫЙ ID и Доступность -->
+				<name>Ремінець для Xiaomi Amazfit Bip Milanese Loop 20mm</name>   <!-- Наименование -->
+				<name_ru>Ремешок Xiaomi Amazfit Bip Milanese Loop 20mm</name_ru>
+				<Sku-name>Black(02)</Sku-name>   <!-- Наименование артикула/характеристика -->
+				<url/>    <!-- URL генерируем свой, но если есть в базе существующие, то укажите в формате /product24124  БЕЗ ДОМЕННОГО ИМЕНИ ПОСЛЕДНЯЯ ВЕТКА -->
+				<price>0</price>    <!-- Цена РРЦ -->
+				<sklad>30</sklad>   <!-- Количество на складе -->
+				<price1-opt-uah>102,9</price1-opt-uah>   <!-- Цены в грн -->
+				<price2-dil-uah>98,7</price2-dil-uah>
+				<price3-vip-uah>94,5</price3-vip-uah>
+				<price4-par-uah/>                        <!-- Цены в грн -->
+				<price1-opt-usd>2,45</price1-opt-usd>    <!-- Цены в usd -->
+				<price2-dil-usd>2,35</price2-dil-usd>
+				<price3-vip-usd>2,25</price3-vip-usd>
+				<price4-par-usd/>                        <!-- Цены в usd -->
+				<currencyId id="USD" rate="42"/>         <!-- Текущий курс валют товара НЕ ОБЯЗАТЕЛЬНО, ЕСТЬ ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ -->
+				<categoryId>2</categoryId>               <!-- ID категории, к которой относится товар -->
+				<picture/>                               <!-- Изображение через ; к примеру: https://ftp.mobaks.com.ua/images/00001.jpg;https://ftp.mobaks.com.ua/images/00002.jpg; -->
+				<description/>                            <!-- Описание товара -->
+				<param name="Виробник">Китай</param>                             <!-- НИЖЕ - ХАРАКТЕРИСТИКИ -->
+				<param name="Бренд">Amazfit Bip</param>
+				<param name="Бренд Товару">Xiaomi</param>
+				<param name="Модель Ремінця">Universal 20mm</param>
+				<param name="Матеріал Ремінця">Метал</param>
+				<param name="Матеріал корпусу">Метал</param>
+				<param name="Ширина, мм">20mm</param>
+			</offer>
+            <!-- Пример оффера с большим количеством характеристик как артикулов (SKU)-->
+			<offer id="00-00000828-Blue(6)" group_id="00-00000828" available="true"> <!-- Открытие тега, его УНИКАЛЬНЫЙ ID, ID группы и Доступность -->
+				<name>Ремінець для Xiaomi Amazfit Bip Milanese Loop 20mm</name>
+				<name_ru>Ремешок Xiaomi Amazfit Bip Milanese Loop 20mm</name_ru>
+				<Sku-name>Blue(6)</Sku-name>
+				<url/>
+				<price>0</price>                
+				<sklad>8</sklad>                                <!-- Количество на складе КОНКРЕТНОГО АРТИКУЛА -->
+				<price1-opt-uah>102,9</price1-opt-uah>           <!-- Набор цен КОНКРЕТНОГО АРТИКУЛА -->
+				<price2-dil-uah>98,7</price2-dil-uah>
+				<price3-vip-uah>94,5</price3-vip-uah>
+				<price4-par-uah/>
+				<price1-opt-usd>2,45</price1-opt-usd>
+				<price2-dil-usd>2,35</price2-dil-usd>
+				<price3-vip-usd>2,25</price3-vip-usd>
+				<price4-par-usd/>
+				<currencyId id="USD" rate="42"/>
+				<categoryId>2</categoryId>
+				<picture/>                                        <!-- Изображение КОНКРЕТНОГО АРТИКУЛА -->
+				<description/>
+				<param name="Виробник">Китай</param>
+				<param name="Бренд">Amazfit Bip</param>
+				<param name="Бренд Товару">Xiaomi</param>
+				<param name="Модель Ремінця">Universal 20mm</param>
+				<param name="Матеріал Ремінця">Метал</param>
+				<param name="Матеріал корпусу">Метал</param>
+				<param name="Ширина, мм">20mm</param>
+			</offer>
+			<offer id="00-00000828-Bronze" group_id="00-00000828" available="false">
+				<name>Ремінець для Xiaomi Amazfit Bip Milanese Loop 20mm</name>
+				<name_ru>Ремешок Xiaomi Amazfit Bip Milanese Loop 20mm</name_ru>
+				<Sku-name>Bronze</Sku-name>
+				<url/>
+				<price>0</price>
+				<sklad/>
+				<price1-opt-uah>102,9</price1-opt-uah>
+				<price2-dil-uah>98,7</price2-dil-uah>
+				<price3-vip-uah>94,5</price3-vip-uah>
+				<price4-par-uah/>
+				<price1-opt-usd>2,45</price1-opt-usd>
+				<price2-dil-usd>2,35</price2-dil-usd>
+				<price3-vip-usd>2,25</price3-vip-usd>
+				<price4-par-usd/>
+				<currencyId id="USD" rate="42"/>
+				<categoryId>2</categoryId>
+				<picture/>
+				<description/>
+				<param name="Виробник">Китай</param>
+				<param name="Бренд">Amazfit Bip</param>
+				<param name="Бренд Товару">Xiaomi</param>
+				<param name="Модель Ремінця">Universal 20mm</param>
+				<param name="Матеріал Ремінця">Метал</param>
+				<param name="Матеріал корпусу">Метал</param>
+				<param name="Ширина, мм">20mm</param>
+			</offer>
 
         </offers>
     </shop>
